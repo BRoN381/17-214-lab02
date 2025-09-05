@@ -4,13 +4,13 @@ interface Rectangle {
     computeArea: () => number
 }
 
-function newRectangle(width: number, height: number): Rectangle {
+function newRectangle(width: number, height: number): Shape {
+    let internalWidth = width;
+    let internalHeight = height;
+    
     return {
-        width,
-        height,
-
         computeArea: function (): number {
-            return width * height
+            return internalWidth * internalHeight
         }
     }
 }
